@@ -3,7 +3,7 @@ using System;
 
 namespace SnakeEyesGame.Models
 {
-   
+    [JsonObject(MemberSerialization.OptIn)]
     public class SnakeEyes
     {
         #region Fields
@@ -12,11 +12,11 @@ namespace SnakeEyesGame.Models
         #endregion
 
         #region Properties
-        
+        [JsonProperty]
         public int  Total {get; private set; }
-       
+        [JsonProperty]
         public int Eye1 { get { return _eye1.Pips; }  }
-       
+        [JsonProperty]
         public int Eye2 { get { return _eye2.Pips; } }
         #endregion
 
